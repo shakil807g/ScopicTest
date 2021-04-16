@@ -38,3 +38,7 @@ Go to the [Releases](https://github.com/shakil807g/ScopicTest/releases) to downl
   - Firebase Auth
   - Firebase FireStore
 
+- Firebase Clould Functions
+  Firebase cloud Function code can be found at https://github.com/shakil807g/ScopicTest/blob/master/FirebaseCloud/functions/index.js  But since Cloud Function are only supported   on paid Firebase plan it's not deploy on Firebase.  
+
+
