@@ -15,10 +15,10 @@ Go to the [Releases](https://github.com/shakil807g/ScopicTest/releases) to downl
 <p align="left">
 <img src="https://user-images.githubusercontent.com/13196689/115075675-e2e8c500-9f14-11eb-9371-9c9a70e76cc7.png" width="32%"/>
  <img src="https://user-images.githubusercontent.com/13196689/115075717-f3993b00-9f14-11eb-9789-ee45cd816fc4.png" width="32%"/>
- <img src="https://user-images.githubusercontent.com/13196689/115075675-e2e8c500-9f14-11eb-9371-9c9a70e76cc7.png" width="32%"/>
+ <img src="https://user-images.githubusercontent.com/13196689/115076302-d0bb5680-9f15-11eb-8b37-1b0ed65690fc.png" width="32%"/>
 </p>
 <p align="left">
-<img src="https://user-images.githubusercontent.com/13196689/115075717-f3993b00-9f14-11eb-9789-ee45cd816fc4.png" width="32%"/>
+<img src="https://user-images.githubusercontent.com/13196689/115076279-c9944880-9f15-11eb-88b2-4b66ecf589af.png" width="32%"/>
  <img src="https://user-images.githubusercontent.com/13196689/115075728-f85def00-9f14-11eb-889c-94211fc070c2.png" width="32%"/>
  <img src="https://user-images.githubusercontent.com/13196689/115075738-fc8a0c80-9f14-11eb-941f-e88a1434de1e.png" width="32%"/>
 </p>
