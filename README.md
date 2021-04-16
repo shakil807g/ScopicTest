@@ -35,6 +35,6 @@ Go to the [Releases](https://github.com/shakil807g/ScopicTest/releases) to downl
   - Repository pattern
 
 - Firebase
-  = Firebase Auth
+  - Firebase Auth
   - Firebase FireStore
 
