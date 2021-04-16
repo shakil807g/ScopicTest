@@ -1,6 +1,6 @@
 <h1 align="center">Scopic Task</h1></br>
 <p align="center">  
-An simple image gallery app utilizing Unsplash API to showcase modern Android development architecture (Compose + MVVM + Kotlin + Retrofit2 + Hilt + Coroutines + Kotlin Flow + Jetpack Paging 3) 
+ Scopic Test Using Firebase 
 </p>
 </br>
 
@@ -9,7 +9,7 @@ An simple image gallery app utilizing Unsplash API to showcase modern Android de
 </p>
 
 ## Download
-Go to the [Releases](https://github.com/shakil807g/SimpleImageGallery/releases) to download the latest APK.
+Go to the [Releases](https://github.com/shakil807g/ScopicTest/releases) to download the latest APK.
 
 ## Screenshots
 <p align="left">
@@ -22,7 +22,6 @@ Go to the [Releases](https://github.com/shakil807g/SimpleImageGallery/releases) 
 - 100% [Kotlin](https://kotlinlang.org/) based + [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
 - Hilt (alpha) for dependency injection.
 - JetPack
-  - Paging 3
   - Kotlin Coroutines (https://kotlinlang.org/docs/reference/coroutines-overview.html) (Asynchronous programming)
   - Compose - A modern toolkit for building native Android UI.
   - LiveData - notify domain layer data to views.
@@ -34,3 +33,8 @@ Go to the [Releases](https://github.com/shakil807g/SimpleImageGallery/releases) 
 - Architecture
   - MVVM Architecture (Declarative View - ViewModel - Model)
   - Repository pattern
+
+- Firebase
+  = Firebase Auth
+  - Firebase FireStore
+
