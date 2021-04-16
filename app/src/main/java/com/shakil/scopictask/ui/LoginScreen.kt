@@ -137,6 +137,9 @@ fun LoginScreen(navController: NavHostController, notesViewModel: NotesViewModel
                         .fillMaxWidth()
                         .wrapContentWidth(Alignment.End)
                         .clickable(onClick = {
+                            notesViewModel.emailValue  = ""
+                            notesViewModel.passwordValue = ""
+                            notesViewModel.passwordVisibility = false
                              navController.navigate("register_page")
                         })
                 )

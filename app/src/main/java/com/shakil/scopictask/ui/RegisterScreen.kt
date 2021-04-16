@@ -130,6 +130,9 @@ fun RegisterScreen(navController: NavHostController, notesViewModel: NotesViewMo
                         color = Red200,
                         modifier = Modifier
                             .clickable(onClick = {
+                                notesViewModel.registerEmailValue  = ""
+                                notesViewModel.registerPasswordValue = ""
+                                notesViewModel.registerPasswordVisibility = false
                                 navController.popBackStack()
                             })
                     )

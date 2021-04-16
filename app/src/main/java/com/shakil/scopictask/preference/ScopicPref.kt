@@ -43,7 +43,7 @@ class ScopicPref @Inject constructor(
     }
 
 
-    suspend fun markUserLogIn(userId: String) {
+    suspend fun saveUserId(userId: String) {
         context.dataStore.edit { preferences ->
             preferences[USER_ID_KEY] = userId
         }

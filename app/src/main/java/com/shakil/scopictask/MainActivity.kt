@@ -35,6 +35,7 @@ class MainActivity : ComponentActivity() {
     @InternalCoroutinesApi
     private val notesViewModel: NotesViewModel by viewModels()
 
+    @ExperimentalMaterialApi
     @ExperimentalComposeUiApi
     @InternalCoroutinesApi
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,9 +60,10 @@ class MainActivity : ComponentActivity() {
                     composable(
                         "list_page",
                         content = { ListScreen(navController = navController, notesViewModel) })
+                    composable(
+                        "profile_page",
+                        content = { ProfileScreen(navController = navController, notesViewModel) })
                 })
-
-
 
                 if (notesViewModel.showAddNoteDialog) {
                     AddNoteDialog(notesViewModel)
@@ -139,15 +141,16 @@ fun AddNoteDialog(notesViewModel: NotesViewModel) {
     val focusRequester = FocusRequester()
     AlertDialog(
         onDismissRequest = { notesViewModel.noteText = "" },
-        title = {
-            Text(text = "Add Notes", Modifier.padding())
+        title = { 
+          Text(text = "")  
         },
         text = {
             Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 16.dp)
+                modifier = Modifier.fillMaxWidth()
             ) {
+
+                Spacer(modifier = Modifier.requiredHeight(16.dp))
+
                 OutlinedTextField(
                     value = notesViewModel.noteText,
                     onValueChange = {
@@ -177,15 +180,21 @@ fun AddNoteDialog(notesViewModel: NotesViewModel) {
                 text = "Save",
                 style = TextStyle(color = Red200, fontSize = 16.sp),
                 modifier = Modifier
-                    .padding()
+                    .padding(horizontal = 16.dp)
                     .clickable {
-                        notesViewModel.addNotes(notesViewModel.noteText)
+                        notesViewModel.showAddNoteDialog = false
+                        if (notesViewModel.isListFromFirebase) {
+                            notesViewModel.addNotesToFirebase(notesViewModel.noteText)
+                        } else {
+                            notesViewModel.addNoteToPreference(notesViewModel.noteText)
+                        }
+                        notesViewModel.noteText = ""
                     })
         },
         confirmButton = {
             Text(text = "Cancel",
                 Modifier
-                    .padding()
+                    .padding(end = 16.dp)
                     .clickable {
                         notesViewModel.showAddNoteDialog = false
                         notesViewModel.noteText = ""

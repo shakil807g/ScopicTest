@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.navigate
+import androidx.navigation.compose.popUpTo
 import com.shakil.scopictask.viewmodel.NotesViewModel
 import kotlinx.coroutines.InternalCoroutinesApi
 
@@ -18,6 +19,11 @@ fun AuthScreen(navController: NavHostController, notesViewModel: NotesViewModel)
 
     if(destination.value != null) {
         val destinationToLaunch = destination.value!!
-        navController.navigate(destinationToLaunch)
+        navController.navigate(destinationToLaunch) {
+            popUpTo(navController.graph.startDestination) {
+                inclusive = true
+            }
+        }
+        destination.value = null
     }
 }

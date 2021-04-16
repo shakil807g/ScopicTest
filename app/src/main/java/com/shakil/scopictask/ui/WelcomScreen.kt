@@ -13,6 +13,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.navigate
+import androidx.navigation.compose.popUpTo
 import com.shakil.scopictask.ui.theme.Grey
 import com.shakil.scopictask.viewmodel.NotesViewModel
 import kotlinx.coroutines.InternalCoroutinesApi
@@ -20,6 +22,7 @@ import kotlinx.coroutines.InternalCoroutinesApi
 @InternalCoroutinesApi
 @Composable
 fun WelcomScreen(navController: NavHostController, notesViewModel: NotesViewModel) {
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -31,7 +34,8 @@ fun WelcomScreen(navController: NavHostController, notesViewModel: NotesViewMode
             text = "Welcome",
             modifier = Modifier
                 .fillMaxWidth()
-                .wrapContentWidth(Alignment.CenterHorizontally),
+                .wrapContentWidth(Alignment.CenterHorizontally)
+                .padding(top = 20.dp),
 
             style = TextStyle(
                 fontWeight = FontWeight.Bold,
@@ -53,13 +57,18 @@ fun WelcomScreen(navController: NavHostController, notesViewModel: NotesViewMode
                 letterSpacing = 4.sp,
                 color = Grey
             ),
-            fontSize = 30.sp
+            fontSize = 22.sp
         )
 
         Spacer(modifier = Modifier.weight(1f))
         Button(
             onClick = {
-
+                notesViewModel.markWelComeScreen()
+                navController.navigate("list_page") {
+                    popUpTo("welcome_page") {
+                        inclusive = true
+                    }
+                }
             },
             modifier = Modifier
                 .fillMaxWidth()
