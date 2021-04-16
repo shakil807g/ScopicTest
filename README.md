@@ -32,11 +32,9 @@ Go to the [Releases](https://github.com/shakil807g/ScopicTest/releases) to downl
 - JetPack
   - Kotlin Coroutines (https://kotlinlang.org/docs/reference/coroutines-overview.html) (Asynchronous programming)
   - Compose - A modern toolkit for building native Android UI.
-  - LiveData - notify domain layer data to views.
+  - Kotlin Flow - notify domain layer data to views.
   - Lifecycle - dispose observing data when lifecycle state changes.
   - ViewModel - UI related data holder, lifecycle aware.
-  - Moshi - (https://github.com/square/moshi) (Kotlin JSON library for Android from Square)
-  - Accompanist - (https://github.com/chrisbanes/accompanist/tree/master/coil) (Image Loading with coil)
 
 - Architecture
   - MVVM Architecture (Declarative View - ViewModel - Model)
